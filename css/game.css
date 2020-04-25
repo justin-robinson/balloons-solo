@@ -1,0 +1,11 @@
+.balloon {
+  position: fixed;
+}
+
+.balloon > .container {
+  position: relative;
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}

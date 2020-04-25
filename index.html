@@ -5,47 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Balloons</title>
+  <script src="js/app.js" type="module"></script>
   <link rel="stylesheet" href="css/reset.css">
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;600&family=Luckiest+Guy&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="css/default.css">
-  <link rel="stylesheet" href="css/home.css">
-  
+  <link rel="stylesheet" href="css/game.css">
 </head>
-<body >
-  <section id="deleteMe">
-
-    <header>
-      <nav>
-        <section class="header-logo center">
-          <a href="index.html"><img class="logo" src="assets/balloon-logo.png" alt="logo"></a>
-        </section>
-      </nav>
-    </header>
-    <main>
-      <section id="homepageContent">
-        <h1></h1>
-        <img class="game-screen center" src="assets/game-screenshot.jpg" alt="screenshot of game">
-        <p>You will be prompted to click anywhere to start the game. At the top of the screen you will be told which color balloons are your target. Click on the correct colored balloons. You will earn one point for each correctly colored balloon and will lose one point for each incorrect balloon. At the end of the game you will be redirected to the scores page to see how you did.
-        </p>
-
-        <form class="form center" id="form">
-          <input type="text" id="name" name="name" placeholder="Name">
-          <br>
-          <input id="play-button" type="submit" value="PLAY">
-        </form>
-      </section>
-      <section id="gameContainer">
-      </section>
-    </main>
-    <footer>
-      <ul>
-        <a href="results.html" class="scores">Scores</a> | <li><a href="about-us.html">About Us</a></li>
-      </ul>
-    </footer>
-
-  </section>
-  <script src="js/app.js"></script>
+<body>
+  <div id="app"></div>
 </body>
-
 </html>

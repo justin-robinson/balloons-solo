@@ -1,0 +1,42 @@
+[
+  {
+    "color": "black",
+    "imgSrc": "/assets/balloons/black.png"
+  },
+  {
+    "color": "blue",
+    "imgSrc": "/assets/balloons/blue.png"
+  },
+  {
+    "color": "green",
+    "imgSrc": "/assets/balloons/green.png"
+  },
+  {
+    "color": "light-blue",
+    "imgSrc": "/assets/balloons/light-blue.png"
+  },
+  {
+    "color": "orange",
+    "imgSrc": "/assets/balloons/orange.png"
+  },
+  {
+    "color": "pink",
+    "imgSrc": "/assets/balloons/pink.png"
+  },
+  {
+    "color": "purple",
+    "imgSrc": "/assets/balloons/purple.png"
+  },
+  {
+    "color": "red",
+    "imgSrc": "/assets/balloons/red.png"
+  },
+  {
+    "color": "white",
+    "imgSrc": "/assets/balloons/white.png"
+  },
+  {
+    "color": "yellow",
+    "imgSrc": "/assets/balloons/yellow.png"
+  }
+]
