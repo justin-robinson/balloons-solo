@@ -6,24 +6,30 @@ export default class Game extends Element {
   balloonToClick;
   balloonContainer;
   instructionsContainer;
+  timerContainer;
   interval;
   height;
   score;
   width;
+  startTime;
+  timer;
 
-  static HOW_OFTEN_TO_RENDER_BALLOONS_MS = 200;
+  static HOW_OFTEN_TO_RENDER_BALLOONS_MS = 100;
   static HOW_MANY_BALLOONS_TO_RENDER = 5;
   static HOW_LONG_A_BALLOON_EXISTS_MS = 5000;
+  static GAME_LENGTH_TIMER_MS = 10000;
 
   constructor(balloonToClick, width, height) {
     super();
     this.balloonContainer = document.createElement('div');
     this.balloonToClick = balloonToClick;
     this.instructionsContainer = document.createElement('div');
+    this.timerContainer = document.createElement('div');
     this.height = height;
     this.score = 0;
     this.width = width;
 
+    this.element.appendChild(this.timerContainer);
     this.element.appendChild(this.instructionsContainer);
     this.element.appendChild(this.balloonContainer);
   }
@@ -40,9 +46,25 @@ export default class Game extends Element {
   
   start = () => {
     this.interval = setInterval(this.renderBalloons, Game.HOW_OFTEN_TO_RENDER_BALLOONS_MS);
-    setTimeout(this.end, 30 * 1000);
+    this.startTime = performance.now();
+    this.timer = setInterval(this.tickClock, 1000);
+    this.tickClock();
     this.render();
     this.renderBalloons();
+  }
+
+  timeLeft = (startTime, countdownFrom) => {
+    const timePassed = Math.floor(Math.abs(startTime - performance.now()) / 1000);
+    return countdownFrom - timePassed;
+  }
+
+  tickClock = () => {
+    const timeLeft = this.timeLeft(this.startTime, Game.GAME_LENGTH_TIMER_MS / 1000);
+    this.timerContainer.innerText = `Time Left: ${timeLeft}s`;
+    if (timeLeft <= 0) {
+      clearInterval(this.timer);
+      this.end();
+    }
   }
 
   end = () => {
