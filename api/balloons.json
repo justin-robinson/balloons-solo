@@ -1,9 +1,5 @@
 [
   {
-    "color": "black",
-    "imgSrc": "/assets/balloons/black.png"
-  },
-  {
     "color": "blue",
     "imgSrc": "/assets/balloons/blue.png"
   },
@@ -30,10 +26,6 @@
   {
     "color": "red",
     "imgSrc": "/assets/balloons/red.png"
-  },
-  {
-    "color": "white",
-    "imgSrc": "/assets/balloons/white.png"
   },
   {
     "color": "yellow",
